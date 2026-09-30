@@ -14,6 +14,7 @@ The layers serve different evidential roles. They must not be concatenated into 
 
 - `p0_item_level_calibration.csv`: item-level P0 calibration metadata.
 - `d2_102.jsonl`: the cleaned annotation view and final human Gold labels for all 102 D2 challenge-confirmation items.
+- `dev30_fixed_scores.jsonl`: the 30 archived development labels and fixed scores for Primary joint linear, Direct admission, and Validity, using release-local IDs; used only for the declared post-hoc threshold analysis.
 - `silver_300.jsonl`: the cleaned annotation view and recommended Silver labels for 300 items.
 - `silver_300_provenance.jsonl`: per-item model agreement and human-review provenance.
 

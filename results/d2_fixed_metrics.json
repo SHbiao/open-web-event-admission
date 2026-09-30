@@ -1,0 +1,3432 @@
+{
+  "evidence_level": "challenge confirmation, not Web prevalence",
+  "target_metrics": "NA_NOT_ESTIMABLE_NO_TARGET_GOLD",
+  "mention_metrics": "NA_NOT_ESTIMABLE_NO_MENTION_GOLD",
+  "candidate_coverage": 0.7745098039215687,
+  "no_candidate_count": 23,
+  "generation_limit_count": 0,
+  "generator_status_counts": {
+    "INVALID_SPANS": 6,
+    "NONFINITE_SCORE": 0,
+    "RERANK_ERROR": 0,
+    "NO_CANDIDATE": 0,
+    "OK": 93,
+    "INVALID_SCHEMA": 0,
+    "INVALID_JSON": 3,
+    "MISSING_SCORE": 0,
+    "RETRIEVAL_ERROR": 0,
+    "GENERATION_LIMIT": 0,
+    "MODEL_ERROR": 0
+  },
+  "bootstrap": {
+    "seed": 20260928,
+    "draws": 2000,
+    "paired": true,
+    "strata": "Gold class",
+    "cluster_key": "external_url_normalized else normalized_body_sha256"
+  },
+  "failure_counts": {
+    "no_candidate": 23,
+    "parse_failure": 9,
+    "generation_failure": 0,
+    "retrieval_failure": 0,
+    "rerank_failure": 0
+  },
+  "failure_rates": {
+    "no_candidate": 0.22549019607843138,
+    "parse_failure": 0.08823529411764706,
+    "generation_failure": 0.0,
+    "retrieval_failure": 0.0,
+    "rerank_failure": 0.0
+  },
+  "methods": {
+    "admit_all": {
+      "n": 102,
+      "n_valid": 102,
+      "coverage": 1.0,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 1.0,
+      "reject_far": 1.0,
+      "roc_auc": 0.5,
+      "auprc": 0.5588235294117647,
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          1.0,
+          1.0
+        ],
+        "reject_far": [
+          1.0,
+          1.0
+        ],
+        "roc_auc": [
+          0.5,
+          0.5
+        ],
+        "auprc": [
+          0.5588235294117647,
+          0.5588235294117647
+        ]
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 1.0,
+          "admission_retention": 1.0,
+          "reject_far": 1.0
+        }
+      ]
+    },
+    "bm25_full_top1": {
+      "n": 102,
+      "n_valid": 101,
+      "coverage": 0.9901960784313726,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 0.9298245614035088,
+      "reject_far": 0.6,
+      "roc_auc": "NA_NOT_FULL_COVERAGE",
+      "auprc": "NA_NOT_FULL_COVERAGE",
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          0.8596491228070176,
+          0.9824561403508771
+        ],
+        "reject_far": [
+          0.4666666666666667,
+          0.7555555555555555
+        ],
+        "roc_auc": "NA_NOT_FULL_COVERAGE",
+        "auprc": "NA_NOT_FULL_COVERAGE"
+      },
+      "conditional_valid_score": {
+        "n_valid": 101,
+        "admissible_n": 57,
+        "reject_n": 44,
+        "coverage": 0.9901960784313726,
+        "roc_auc": 0.7412280701754386,
+        "auprc": 0.7473523881715476
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 75.02978285790046,
+          "admission_retention": 0.0,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 67.733929684554,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 64.7143011730032,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 62.31260673305247,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 60.374413333028926,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 53.040157301032046,
+          "admission_retention": 0.10526315789473684,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 52.99358113665199,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 52.379989312877086,
+          "admission_retention": 0.14035087719298245,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 51.748256448600586,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 49.567780302263536,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 49.40795439949936,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 46.66098496971182,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 45.70192735704232,
+          "admission_retention": 0.19298245614035087,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 45.53473310797572,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 45.30565045776544,
+          "admission_retention": 0.22807017543859648,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 45.01039842046125,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 44.762340373383516,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 44.413263476910245,
+          "admission_retention": 0.2807017543859649,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 43.49527168751913,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 43.045573157163275,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 41.79988470423922,
+          "admission_retention": 0.3157894736842105,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 41.770181170705946,
+          "admission_retention": 0.3333333333333333,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 41.69932621815377,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 41.50213925721246,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 41.4756565312937,
+          "admission_retention": 0.3684210526315789,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 40.58272124764905,
+          "admission_retention": 0.38596491228070173,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 40.216648981768955,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 39.745754268205076,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": 38.323768801844004,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": 37.78789152500266,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 37.733371786512755,
+          "admission_retention": 0.42105263157894735,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 37.66432450123508,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 37.33303940690792,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 37.05469313323021,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 36.72474139421222,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 35.733706512084524,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 35.637393077628225,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 35.16897967109063,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": 35.044487025590975,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": 34.648488973334544,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": 34.318859050144994,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": 34.14851832620947,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": 34.118327095140515,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": 34.054178468601734,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 34.0100548228674,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 33.76373474745019,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 33.64861483302589,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 33.58470856188002,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 33.42822130781713,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 33.34398604935128,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 33.21599210510436,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 33.204441047086,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 33.037370297998656,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 33.000773284062475,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 32.40016801181438,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 32.0763106903955,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 31.96120453952266,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 31.75021725563341,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 31.68080592644607,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 31.49993360949354,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": 31.08977288595081,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 30.904393910453106,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 30.694034198196665,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 30.66014473869575,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 30.574811314971996,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 30.54350204132047,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": 30.241807709186855,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": 29.96656679883372,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.4444444444444444
+        },
+        {
+          "threshold": 29.830226751773328,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": 29.69273773480389,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": 29.680862043060667,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.4888888888888889
+        },
+        {
+          "threshold": 28.655017884881868,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.4888888888888889
+        },
+        {
+          "threshold": 28.3009382579862,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.5111111111111111
+        },
+        {
+          "threshold": 27.118803612293927,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.5111111111111111
+        },
+        {
+          "threshold": 26.917598337843668,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": 26.703761256726413,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": 26.51039721363962,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": 26.433322980038742,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": 26.14859143428403,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": 26.079248127568576,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": 25.9490766180287,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": 25.859793850010195,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": 25.29172034112227,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": 25.189708195780206,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7333333333333333
+        },
+        {
+          "threshold": 24.821918797265816,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7555555555555555
+        },
+        {
+          "threshold": 24.467026990603667,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.7555555555555555
+        },
+        {
+          "threshold": 24.015419499220194,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.7777777777777778
+        },
+        {
+          "threshold": 24.009051640670123,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8
+        },
+        {
+          "threshold": 23.260802182791167,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": 20.983154699244537,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8444444444444444
+        },
+        {
+          "threshold": 20.846826604805937,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.8444444444444444
+        },
+        {
+          "threshold": 20.372046965836862,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": 20.1593011408726,
+          "admission_retention": 1.0,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": 18.396063846046616,
+          "admission_retention": 1.0,
+          "reject_far": 0.8888888888888888
+        },
+        {
+          "threshold": 17.786424876141897,
+          "admission_retention": 1.0,
+          "reject_far": 0.9111111111111111
+        },
+        {
+          "threshold": 16.304566671980048,
+          "admission_retention": 1.0,
+          "reject_far": 0.9333333333333333
+        },
+        {
+          "threshold": 16.15552935413013,
+          "admission_retention": 1.0,
+          "reject_far": 0.9555555555555556
+        },
+        {
+          "threshold": 11.72091887566735,
+          "admission_retention": 1.0,
+          "reject_far": 0.9777777777777777
+        }
+      ]
+    },
+    "bge_full_top1": {
+      "n": 102,
+      "n_valid": 101,
+      "coverage": 0.9901960784313726,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 0.9649122807017544,
+      "reject_far": 0.8888888888888888,
+      "roc_auc": "NA_NOT_FULL_COVERAGE",
+      "auprc": "NA_NOT_FULL_COVERAGE",
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          0.9122807017543859,
+          1.0
+        ],
+        "reject_far": [
+          0.7777777777777778,
+          0.9777777777777777
+        ],
+        "roc_auc": "NA_NOT_FULL_COVERAGE",
+        "auprc": "NA_NOT_FULL_COVERAGE"
+      },
+      "conditional_valid_score": {
+        "n_valid": 101,
+        "admissible_n": 57,
+        "reject_n": 44,
+        "coverage": 0.9901960784313726,
+        "roc_auc": 0.6718500797448166,
+        "auprc": 0.7232717151031229
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 4.796875,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 4.49609375,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 3.931640625,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.568359375,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.525390625,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 2.123046875,
+          "admission_retention": 0.07017543859649122,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 1.9267578125,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 1.5556640625,
+          "admission_retention": 0.10526315789473684,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 1.427734375,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 1.4267578125,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 1.267578125,
+          "admission_retention": 0.14035087719298245,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 1.1982421875,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 1.1123046875,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.86865234375,
+          "admission_retention": 0.19298245614035087,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.53271484375,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.417236328125,
+          "admission_retention": 0.22807017543859648,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.3828125,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.376220703125,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.3525390625,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.1708984375,
+          "admission_retention": 0.2807017543859649,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.0124969482421875,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.0043487548828125,
+          "admission_retention": 0.3157894736842105,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.00896453857421875,
+          "admission_retention": 0.3333333333333333,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.050933837890625,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.06341552734375,
+          "admission_retention": 0.3684210526315789,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.1470947265625,
+          "admission_retention": 0.38596491228070173,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.1669921875,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.1875,
+          "admission_retention": 0.42105263157894735,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.2210693359375,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": -0.23486328125,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": -0.248046875,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": -0.308837890625,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": -0.3984375,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": -0.460693359375,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": -0.466796875,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": -0.470947265625,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": -0.53857421875,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": -0.5400390625,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": -0.65576171875,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": -0.74462890625,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.771484375,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.85302734375,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.89990234375,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.9091796875,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.98974609375,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -1.0126953125,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": -1.18359375,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": -1.263671875,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": -1.42578125,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -1.4287109375,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -1.45703125,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -1.541015625,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": -1.7392578125,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": -1.814453125,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": -1.93359375,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -1.9541015625,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -1.9853515625,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.4444444444444444
+        },
+        {
+          "threshold": -2.1015625,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -2.224609375,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.4888888888888889
+        },
+        {
+          "threshold": -2.3515625,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.5111111111111111
+        },
+        {
+          "threshold": -2.529296875,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -2.533203125,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -2.53515625,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -2.62109375,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -2.669921875,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -2.875,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -2.908203125,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -2.958984375,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -3.05859375,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -3.28515625,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -3.3125,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -3.314453125,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": -3.337890625,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -3.341796875,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -3.34765625,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -3.412109375,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -3.427734375,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -3.474609375,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -3.48828125,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -3.568359375,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -3.611328125,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -3.6171875,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.6888888888888889
+        },
+        {
+          "threshold": -3.693359375,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": -3.84765625,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": -3.935546875,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7333333333333333
+        },
+        {
+          "threshold": -4.00390625,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7555555555555555
+        },
+        {
+          "threshold": -4.18359375,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7777777777777778
+        },
+        {
+          "threshold": -4.1875,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.7777777777777778
+        },
+        {
+          "threshold": -4.2265625,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8
+        },
+        {
+          "threshold": -4.79296875,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": -4.8046875,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8444444444444444
+        },
+        {
+          "threshold": -4.80859375,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": -4.89453125,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8888888888888888
+        },
+        {
+          "threshold": -5.1171875,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.9111111111111111
+        },
+        {
+          "threshold": -5.15234375,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9111111111111111
+        },
+        {
+          "threshold": -5.3359375,
+          "admission_retention": 1.0,
+          "reject_far": 0.9111111111111111
+        },
+        {
+          "threshold": -6.44921875,
+          "admission_retention": 1.0,
+          "reject_far": 0.9333333333333333
+        },
+        {
+          "threshold": -6.625,
+          "admission_retention": 1.0,
+          "reject_far": 0.9555555555555556
+        },
+        {
+          "threshold": -6.68359375,
+          "admission_retention": 1.0,
+          "reject_far": 0.9777777777777777
+        }
+      ]
+    },
+    "validity": {
+      "n": 102,
+      "n_valid": 79,
+      "coverage": 0.7745098039215687,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 0.7719298245614035,
+      "reject_far": 0.28888888888888886,
+      "roc_auc": "NA_NOT_FULL_COVERAGE",
+      "auprc": "NA_NOT_FULL_COVERAGE",
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          0.6666666666666666,
+          0.8771929824561403
+        ],
+        "reject_far": [
+          0.15555555555555556,
+          0.4222222222222222
+        ],
+        "roc_auc": "NA_NOT_FULL_COVERAGE",
+        "auprc": "NA_NOT_FULL_COVERAGE"
+      },
+      "conditional_valid_score": {
+        "n_valid": 79,
+        "admissible_n": 50,
+        "reject_n": 29,
+        "coverage": 0.7745098039215687,
+        "roc_auc": 0.8699999999999999,
+        "auprc": 0.894163469271906
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 16.75,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 16.5,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 16.375,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 16.25,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 15.875,
+          "admission_retention": 0.07017543859649122,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 15.75,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 15.625,
+          "admission_retention": 0.10526315789473684,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 15.25,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 15.125,
+          "admission_retention": 0.14035087719298245,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.875,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.75,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.625,
+          "admission_retention": 0.19298245614035087,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.5,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.375,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.25,
+          "admission_retention": 0.2807017543859649,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.125,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 14.0,
+          "admission_retention": 0.3157894736842105,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 13.75,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 13.5,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 13.375,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 13.125,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 13.0,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 12.75,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 12.625,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 12.125,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 12.0,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.75,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.0,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 10.875,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 10.625,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 10.5,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 10.25,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 9.875,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 8.75,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 8.125,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 8.0,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 7.625,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 7.375,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 6.75,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": 6.25,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": 5.875,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 5.625,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 5.5,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 5.0,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": 4.625,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": 3.75,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": 2.25,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 1.25,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 0.75,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 0.5,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 0.0,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -0.5,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -0.75,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": -1.75,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -2.25,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.4444444444444444
+        },
+        {
+          "threshold": -4.375,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4444444444444444
+        },
+        {
+          "threshold": -5.0,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -5.125,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4888888888888889
+        },
+        {
+          "threshold": -6.5,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5111111111111111
+        },
+        {
+          "threshold": -7.625,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -8.875,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -9.375,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -10.375,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -10.875,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -12.5,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": -15.75,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6444444444444445
+        }
+      ]
+    },
+    "direct_admission": {
+      "n": 102,
+      "n_valid": 102,
+      "coverage": 1.0,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 0.8070175438596491,
+      "reject_far": 0.2222222222222222,
+      "roc_auc": 0.8680311890838207,
+      "auprc": 0.9023621495734662,
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          0.7017543859649122,
+          0.9122807017543859
+        ],
+        "reject_far": [
+          0.1111111111111111,
+          0.3333333333333333
+        ],
+        "roc_auc": [
+          0.7927875243664717,
+          0.9341130604288499
+        ],
+        "auprc": [
+          0.8433283665950726,
+          0.9541119308576762
+        ]
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 17.0,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 16.125,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 15.875,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 15.75,
+          "admission_retention": 0.07017543859649122,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 15.125,
+          "admission_retention": 0.10526315789473684,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 14.875,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 14.75,
+          "admission_retention": 0.14035087719298245,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 14.5,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 14.125,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 14.0,
+          "admission_retention": 0.19298245614035087,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 13.875,
+          "admission_retention": 0.22807017543859648,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 13.0,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 12.875,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 12.75,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 12.375,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 12.25,
+          "admission_retention": 0.3157894736842105,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.875,
+          "admission_retention": 0.3333333333333333,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.75,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.625,
+          "admission_retention": 0.38596491228070173,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.5,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.25,
+          "admission_retention": 0.42105263157894735,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.125,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 11.0,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 10.625,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 10.5,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 10.25,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 9.875,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 9.75,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 8.75,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 8.375,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 8.125,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 7.875,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 7.625,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 7.125,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 6.625,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 6.5,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 5.875,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 5.5,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 4.25,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 3.625,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 3.25,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": 2.25,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": 1.0,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 0.5,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 0.25,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 0.0,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -1.5,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -2.5,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -2.75,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": -3.0,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -3.125,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": -3.25,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": -3.5,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": -3.75,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -4.25,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -4.5,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -4.75,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -5.0,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -5.5,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -5.75,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -6.125,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -6.5,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": -7.25,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -7.375,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -8.0,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.6888888888888889
+        },
+        {
+          "threshold": -8.375,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": -8.5,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.7333333333333333
+        },
+        {
+          "threshold": -8.75,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.7333333333333333
+        },
+        {
+          "threshold": -9.0,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.7777777777777778
+        },
+        {
+          "threshold": -9.25,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8
+        },
+        {
+          "threshold": -9.625,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": -9.75,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8444444444444444
+        },
+        {
+          "threshold": -9.875,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": -10.125,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": -11.125,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.8888888888888888
+        },
+        {
+          "threshold": -12.25,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9111111111111111
+        },
+        {
+          "threshold": -12.75,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9333333333333333
+        },
+        {
+          "threshold": -12.875,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9555555555555556
+        },
+        {
+          "threshold": -14.375,
+          "admission_retention": 1.0,
+          "reject_far": 0.9555555555555556
+        },
+        {
+          "threshold": -14.75,
+          "admission_retention": 1.0,
+          "reject_far": 0.9777777777777777
+        },
+        {
+          "threshold": -16.875,
+          "admission_retention": 1.0,
+          "reject_far": 1.0
+        }
+      ]
+    },
+    "clean_linear": {
+      "n": 102,
+      "n_valid": 102,
+      "coverage": 1.0,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 0.6842105263157895,
+      "reject_far": 0.5333333333333333,
+      "roc_auc": 0.5263157894736842,
+      "auprc": 0.546048489232132,
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          0.5614035087719298,
+          0.8070175438596491
+        ],
+        "reject_far": [
+          0.37777777777777777,
+          0.6666666666666666
+        ],
+        "roc_auc": [
+          0.4124756335282651,
+          0.6432748538011696
+        ],
+        "auprc": [
+          0.4897693484614805,
+          0.6472514936981438
+        ]
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 7.173825430188693,
+          "admission_retention": 0.0,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 6.8629133159918165,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 5.835256790733032,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 5.586343574195929,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 5.1361344237709865,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 5.070037979889017,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 5.049467743775539,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": 4.783402594894707,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": 4.432423550439111,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": 4.230216880740152,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": 3.8747213626377714,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 3.740382014637156,
+          "admission_retention": 0.07017543859649122,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 3.6412469357559534,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 3.576772953089927,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 3.5133650076878844,
+          "admission_retention": 0.10526315789473684,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 3.3666587269543653,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 3.1520266700527406,
+          "admission_retention": 0.14035087719298245,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 2.9748543833420573,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": 2.832826798134599,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": 2.5141898388697257,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": 2.2380441615930935,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": 2.0420138898684925,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": 1.915655525061971,
+          "admission_retention": 0.19298245614035087,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": 1.81262458121761,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": 1.7998331284966254,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": 1.7773222372911128,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.5826023722350167,
+          "admission_retention": 0.22807017543859648,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.4799798205711396,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.4669279936924342,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.4311602243234773,
+          "admission_retention": 0.2807017543859649,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.409131413029149,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.3629951672518654,
+          "admission_retention": 0.3157894736842105,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.2777623021619129,
+          "admission_retention": 0.3333333333333333,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.259990470215023,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 1.139532454435408,
+          "admission_retention": 0.3684210526315789,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": 0.9594111410612584,
+          "admission_retention": 0.3684210526315789,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 0.9365856375244518,
+          "admission_retention": 0.38596491228070173,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 0.8391354190728374,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": 0.8375800954812206,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": 0.8032854519995308,
+          "admission_retention": 0.42105263157894735,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": 0.7931879530404785,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": 0.7023972510224453,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": 0.6580326264958599,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 0.6350128439919237,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 0.5331970646685674,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 0.33832653885573627,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": 0.23121923071827488,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": 0.2288757346059277,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": 0.1402390261100913,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": 0.11356382330309012,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": 0.03855547839611673,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.0646842157392239,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.12846242851775302,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.1610949277993009,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.23834919891398887,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.4444444444444444
+        },
+        {
+          "threshold": -0.42300067244389183,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -0.5057041382722428,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -0.6174604738047581,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -0.6681135161551196,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.4888888888888889
+        },
+        {
+          "threshold": -0.6821351370927325,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.5111111111111111
+        },
+        {
+          "threshold": -0.6911516886219654,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -0.7875951601068404,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -0.9454372110488124,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -0.9669910499127542,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -0.9953874748048658,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -1.0530601219128228,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -1.1040722899246367,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -1.1927877641239761,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -1.217402204143212,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": -1.3293394146031723,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -1.373058389072273,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -1.4817326504431052,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -1.5835654247143265,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -1.611884800656246,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -1.6479467983545941,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.6888888888888889
+        },
+        {
+          "threshold": -1.6757846366704525,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": -1.7518597814204226,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": -1.787112454273049,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.7333333333333333
+        },
+        {
+          "threshold": -1.7984626017503453,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.7555555555555555
+        },
+        {
+          "threshold": -1.848364228736473,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.7555555555555555
+        },
+        {
+          "threshold": -1.9180159610302976,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.7777777777777778
+        },
+        {
+          "threshold": -1.9258656454089662,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.7777777777777778
+        },
+        {
+          "threshold": -1.9478796934246612,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.8
+        },
+        {
+          "threshold": -2.0400401041378724,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": -2.0712442739253145,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": -2.20889659847939,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": -2.2371049502334057,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.8444444444444444
+        },
+        {
+          "threshold": -2.2765139214701766,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.8444444444444444
+        },
+        {
+          "threshold": -2.5254899651785445,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": -2.59703697606753,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.8888888888888888
+        },
+        {
+          "threshold": -2.6357347866321765,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.8888888888888888
+        },
+        {
+          "threshold": -2.7099312917112135,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.8888888888888888
+        },
+        {
+          "threshold": -3.0746694379297823,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.9111111111111111
+        },
+        {
+          "threshold": -3.3358753916720003,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.9333333333333333
+        },
+        {
+          "threshold": -3.414544657599751,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.9333333333333333
+        },
+        {
+          "threshold": -3.47942093305313,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.9555555555555556
+        },
+        {
+          "threshold": -3.6769673484190575,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.9777777777777777
+        },
+        {
+          "threshold": -3.8353820882182768,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.9777777777777777
+        },
+        {
+          "threshold": -4.182252733736863,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9777777777777777
+        },
+        {
+          "threshold": -4.257498990314702,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 1.0
+        },
+        {
+          "threshold": -5.8791967355882715,
+          "admission_retention": 1.0,
+          "reject_far": 1.0
+        }
+      ]
+    },
+    "clean_rbf": {
+      "n": 102,
+      "n_valid": 102,
+      "coverage": 1.0,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 0.6140350877192983,
+      "reject_far": 0.2,
+      "roc_auc": 0.7929824561403508,
+      "auprc": 0.8308006254338702,
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          0.49122807017543857,
+          0.7368421052631579
+        ],
+        "reject_far": [
+          0.08888888888888889,
+          0.3111111111111111
+        ],
+        "roc_auc": [
+          0.7021442495126705,
+          0.8791423001949318
+        ],
+        "auprc": [
+          0.7488262924542033,
+          0.9100757237082024
+        ]
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 1.1873917767396875,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 1.1236743192649963,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 1.0470803300585194,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 0.8943763863804799,
+          "admission_retention": 0.07017543859649122,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 0.5381113001212909,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.0
+        },
+        {
+          "threshold": 0.5223869195708866,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.5199687180999357,
+          "admission_retention": 0.10526315789473684,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.5129297082518443,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.5081582264512083,
+          "admission_retention": 0.14035087719298245,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.4983750683515622,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.4978043247542683,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.49037844473368053,
+          "admission_retention": 0.19298245614035087,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.480907210578025,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.46757765533055373,
+          "admission_retention": 0.22807017543859648,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.46547885507622744,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.46271718636159154,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.4591213337242419,
+          "admission_retention": 0.2807017543859649,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 0.45756592602772894,
+          "admission_retention": 0.2807017543859649,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.45704512062713865,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.45047608387209803,
+          "admission_retention": 0.3157894736842105,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.4373256754221797,
+          "admission_retention": 0.3333333333333333,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.4336788718013722,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.43319789292956834,
+          "admission_retention": 0.3684210526315789,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.4268691889126899,
+          "admission_retention": 0.38596491228070173,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.40460373966767804,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.4025631780341661,
+          "admission_retention": 0.42105263157894735,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.4017348067832065,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 0.3525947487122203,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.34960161656534194,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.32502984904131826,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.12235043938840506,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 0.12181844272170805,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 0.0567010234993639,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": -0.010911449356754477,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": -0.031006389538055013,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": -0.0712355858567687,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": -0.07709293247110804,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": -0.141665916411292,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": -0.2004405050682584,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": -0.20559228375784355,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": -0.20877841375250994,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": -0.24812076414787798,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": -0.29116458771106235,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": -0.297635634249399,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": -0.3487214264610823,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": -0.34890814441736595,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.35143505703364153,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.3624674665275939,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.4289674037737068,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.4480720160409509,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.4542567287414494,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.4905120824880351,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.5219197997843105,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.5514523361059779,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.5776435048780643,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.5943115527354381,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.6082328631926969,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.6127549120622819,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.6220453617807827,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.6558961280429818,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.6578524139907382,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.6600923688480803,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": -0.6633484047483695,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": -0.6686293358712244,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": -0.6777480070042224,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -0.6780055545887643,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": -0.6830296342357565,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": -0.685763066835258,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.6868857894910628,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -0.6883615874532139,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.4888888888888889
+        },
+        {
+          "threshold": -0.6891406905752757,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5111111111111111
+        },
+        {
+          "threshold": -0.6937101452143781,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -0.7049629027291437,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -0.71438470708299,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -0.7151134063992378,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -0.7225294060926131,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -0.7226030952742271,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": -0.7289246890225459,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": -0.7309725098426969,
+          "admission_retention": 0.8947368421052632,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -0.7321704689758072,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.6444444444444445
+        },
+        {
+          "threshold": -0.7480015105552134,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.6666666666666666
+        },
+        {
+          "threshold": -0.7518801672076072,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.6888888888888889
+        },
+        {
+          "threshold": -0.7567921874969349,
+          "admission_retention": 0.9122807017543859,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": -0.7595881781945046,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.7111111111111111
+        },
+        {
+          "threshold": -0.7662716788711946,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.7333333333333333
+        },
+        {
+          "threshold": -0.7746659525254882,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.7555555555555555
+        },
+        {
+          "threshold": -0.7960829966852678,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.7777777777777778
+        },
+        {
+          "threshold": -0.8015724261543244,
+          "admission_retention": 0.9298245614035088,
+          "reject_far": 0.8
+        },
+        {
+          "threshold": -0.8119348620500901,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.8
+        },
+        {
+          "threshold": -0.8280740413052988,
+          "admission_retention": 0.9473684210526315,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": -0.8848164415636346,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8222222222222222
+        },
+        {
+          "threshold": -0.906416180087535,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8444444444444444
+        },
+        {
+          "threshold": -0.9819496901567427,
+          "admission_retention": 0.9649122807017544,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": -0.9857031938623804,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.8666666666666667
+        },
+        {
+          "threshold": -0.9884496409262243,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.8888888888888888
+        },
+        {
+          "threshold": -1.021264192032261,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9111111111111111
+        },
+        {
+          "threshold": -1.0562206886627514,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9333333333333333
+        },
+        {
+          "threshold": -1.061396626156021,
+          "admission_retention": 0.9824561403508771,
+          "reject_far": 0.9555555555555556
+        },
+        {
+          "threshold": -1.09479580058599,
+          "admission_retention": 1.0,
+          "reject_far": 0.9555555555555556
+        },
+        {
+          "threshold": -1.0996510477318302,
+          "admission_retention": 1.0,
+          "reject_far": 0.9777777777777777
+        },
+        {
+          "threshold": -1.1597225416994044,
+          "admission_retention": 1.0,
+          "reject_far": 1.0
+        }
+      ]
+    },
+    "original_exact_existing_joint_linear": {
+      "n": 102,
+      "n_valid": 79,
+      "coverage": 0.7745098039215687,
+      "admissible_n": 57,
+      "reject_n": 45,
+      "admission_retention": 0.7017543859649122,
+      "reject_far": 0.2222222222222222,
+      "roc_auc": "NA_NOT_FULL_COVERAGE",
+      "auprc": "NA_NOT_FULL_COVERAGE",
+      "paired_cluster_bootstrap_95ci": {
+        "admission_retention": [
+          0.5789473684210527,
+          0.8245614035087719
+        ],
+        "reject_far": [
+          0.1111111111111111,
+          0.35555555555555557
+        ],
+        "roc_auc": "NA_NOT_FULL_COVERAGE",
+        "auprc": "NA_NOT_FULL_COVERAGE"
+      },
+      "conditional_valid_score": {
+        "n_valid": 79,
+        "admissible_n": 50,
+        "reject_n": 29,
+        "coverage": 0.7745098039215687,
+        "roc_auc": 0.769655172413793,
+        "auprc": 0.8221507807602234
+      },
+      "retention_far_curve": [
+        {
+          "threshold": 3.2361825466220644,
+          "admission_retention": 0.0,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.997618520613891,
+          "admission_retention": 0.017543859649122806,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.9574220240764992,
+          "admission_retention": 0.03508771929824561,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.9051882923893615,
+          "admission_retention": 0.05263157894736842,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.456342375514354,
+          "admission_retention": 0.07017543859649122,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.258070960550426,
+          "admission_retention": 0.08771929824561403,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.2288461674613353,
+          "admission_retention": 0.10526315789473684,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.2241798522722513,
+          "admission_retention": 0.12280701754385964,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 2.118952661552389,
+          "admission_retention": 0.14035087719298245,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.9488287771879176,
+          "admission_retention": 0.15789473684210525,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.847801175456625,
+          "admission_retention": 0.17543859649122806,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.7249186049138043,
+          "admission_retention": 0.19298245614035087,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.7248835029820857,
+          "admission_retention": 0.21052631578947367,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.5868276241980899,
+          "admission_retention": 0.22807017543859648,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.5240736046885737,
+          "admission_retention": 0.24561403508771928,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.3523413563000453,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.022222222222222223
+        },
+        {
+          "threshold": 1.2730236676520177,
+          "admission_retention": 0.2631578947368421,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 1.2506935127785466,
+          "admission_retention": 0.2807017543859649,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 1.212264640213543,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.044444444444444446
+        },
+        {
+          "threshold": 1.0867151108846531,
+          "admission_retention": 0.2982456140350877,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.9467685664795049,
+          "admission_retention": 0.3157894736842105,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.9013776903193744,
+          "admission_retention": 0.3333333333333333,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.8074554622579635,
+          "admission_retention": 0.3508771929824561,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.791031396386654,
+          "admission_retention": 0.3684210526315789,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.7475581765091106,
+          "admission_retention": 0.38596491228070173,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.6376552700185945,
+          "admission_retention": 0.40350877192982454,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.6139323755290225,
+          "admission_retention": 0.42105263157894735,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.6035615495014155,
+          "admission_retention": 0.43859649122807015,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.5623906712424243,
+          "admission_retention": 0.45614035087719296,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.5520111715988802,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.06666666666666667
+        },
+        {
+          "threshold": 0.5510395714031844,
+          "admission_retention": 0.47368421052631576,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.5500913499318469,
+          "admission_retention": 0.49122807017543857,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.5439117618101641,
+          "admission_retention": 0.5087719298245614,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.4890665420899478,
+          "admission_retention": 0.5263157894736842,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.48152500869953196,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.08888888888888889
+        },
+        {
+          "threshold": 0.4465279039787815,
+          "admission_retention": 0.543859649122807,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 0.44466849747662485,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.1111111111111111
+        },
+        {
+          "threshold": 0.4203288332610765,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.13333333333333333
+        },
+        {
+          "threshold": 0.33301960356773086,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.15555555555555556
+        },
+        {
+          "threshold": 0.22343135774888467,
+          "admission_retention": 0.5614035087719298,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": 0.20203246185392065,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.17777777777777778
+        },
+        {
+          "threshold": 0.16814361240100018,
+          "admission_retention": 0.5789473684210527,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 0.13830303557362622,
+          "admission_retention": 0.5964912280701754,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 0.13096902162583124,
+          "admission_retention": 0.6140350877192983,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 0.1272831363039415,
+          "admission_retention": 0.631578947368421,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": 0.04147966421134963,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.2
+        },
+        {
+          "threshold": -0.05908509617155555,
+          "admission_retention": 0.6491228070175439,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": -0.09943979731478908,
+          "admission_retention": 0.6666666666666666,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": -0.13795941318721194,
+          "admission_retention": 0.6842105263157895,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": -0.14685654842385787,
+          "admission_retention": 0.7017543859649122,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": -0.16425693626345267,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.2222222222222222
+        },
+        {
+          "threshold": -0.21353881266191926,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.24444444444444444
+        },
+        {
+          "threshold": -0.2875908958948866,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.26666666666666666
+        },
+        {
+          "threshold": -0.31650921456391184,
+          "admission_retention": 0.7192982456140351,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.34178960756028753,
+          "admission_retention": 0.7368421052631579,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.4278131946264306,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.28888888888888886
+        },
+        {
+          "threshold": -0.44683123076861386,
+          "admission_retention": 0.7543859649122807,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": -0.46221434610884427,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.3111111111111111
+        },
+        {
+          "threshold": -0.4626802120424265,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.3333333333333333
+        },
+        {
+          "threshold": -0.47861425801966906,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.35555555555555557
+        },
+        {
+          "threshold": -0.4841415228304483,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.37777777777777777
+        },
+        {
+          "threshold": -0.5068181418388923,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.4
+        },
+        {
+          "threshold": -0.5329461700657188,
+          "admission_retention": 0.7719298245614035,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.5885809017433974,
+          "admission_retention": 0.7894736842105263,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.5991677137507556,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.4222222222222222
+        },
+        {
+          "threshold": -0.620219936996551,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.4444444444444444
+        },
+        {
+          "threshold": -0.7200613688608222,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.4666666666666667
+        },
+        {
+          "threshold": -0.7255806090702035,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.4888888888888889
+        },
+        {
+          "threshold": -0.8480173348818782,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.5111111111111111
+        },
+        {
+          "threshold": -0.8650842401363349,
+          "admission_retention": 0.8070175438596491,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -0.9183268412617364,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.5333333333333333
+        },
+        {
+          "threshold": -0.9572737121645347,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.5555555555555556
+        },
+        {
+          "threshold": -1.0155951885942258,
+          "admission_retention": 0.8245614035087719,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -1.0475127872440204,
+          "admission_retention": 0.8421052631578947,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -1.1523963429043733,
+          "admission_retention": 0.8596491228070176,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -1.3704927615136908,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.5777777777777777
+        },
+        {
+          "threshold": -1.64666290313182,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6
+        },
+        {
+          "threshold": -2.2599286461682953,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6222222222222222
+        },
+        {
+          "threshold": -2.277499381191658,
+          "admission_retention": 0.8771929824561403,
+          "reject_far": 0.6444444444444445
+        }
+      ]
+    }
+  },
+  "gold_sha256": "6cbd8fec4b39bf61af31fb593769b91e53c2ad89b9f9396bb5aaf11d1d410348",
+  "prediction_sha256": "3b606fb2ec3f37097209346969aca5b79cc946c5956984aa69a1cede071846e2"
+}

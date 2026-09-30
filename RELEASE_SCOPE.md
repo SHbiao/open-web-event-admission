@@ -8,6 +8,9 @@ This file is a release gate, not a scientific result.
 - measurement contract and F3 audit report;
 - claim/evidence matrix and study overview;
 - item-free D2 aggregate metrics;
+- exact saved D2 per-method scores, statuses, operating points, and decisions, with private feature records omitted;
+- DEV30 labels and saved scores for the three pre-specified post-hoc diagnostic methods;
+- semantic prompt templates, resource identities, split identifiers, and reproducible post-hoc analysis code;
 - all 102 cleaned D2 annotation-visible items, final human Gold labels, and agreement/adjudication provenance;
 - cleaned 300-item Silver dataset and item-level provenance;
 - English D2 human-annotation, Silver model-annotation, and Silver human-review protocols;
