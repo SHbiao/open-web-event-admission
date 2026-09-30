@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\begin{axis}[
+  width=\columnwidth, height=5.4cm,
+  xmin=0, xmax=0.62, ymin=0.55, ymax=1.02,
+  xlabel={REJECT FAR}, ylabel={ADMISSIBLE retention},
+  grid=major, major grid style={draw=gray!25},
+  legend style={font=\scriptsize, at={(0.98,0.03)}, anchor=south east},
+  tick label style={font=\scriptsize}, label style={font=\scriptsize}
+]
+\addplot[only marks, mark=*, mark size=2pt, blue] coordinates {(0.222,0.807)}; \addlegendentry{Direct}
+\addplot[only marks, mark=square*, mark size=2pt, red] coordinates {(0.222,0.702)}; \addlegendentry{Primary}
+\addplot[only marks, mark=triangle*, mark size=2pt, green!50!black] coordinates {(0.200,0.614)}; \addlegendentry{Clean RBF}
+\addplot[only marks, mark=diamond*, mark size=2pt, orange!85!black] coordinates {(0.289,0.772)}; \addlegendentry{Validity}
+\end{axis}
+\end{tikzpicture}

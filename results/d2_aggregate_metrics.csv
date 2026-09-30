@@ -1,0 +1,9 @@
+method,score_coverage,total_items,admissible_gold,reject_gold,admissible_retained,reject_false_admitted,roc_auc,auprc,auc_status
+admit_all,102,102,57,45,57,45,0.500,0.559,full
+bm25_full_top1,101,102,57,45,53,27,,,'conditional_only'
+bge_full_top1,101,102,57,45,55,40,,,'conditional_only'
+validity,79,102,57,45,44,13,,,'conditional_only'
+direct_admission,102,102,57,45,46,10,0.868,0.902,full
+clean_linear,102,102,57,45,39,24,0.526,0.546,full
+clean_rbf,102,102,57,45,35,9,0.793,0.831,full
+original_exact_existing_joint_linear_primary,79,102,57,45,40,10,,,'conditional_only'

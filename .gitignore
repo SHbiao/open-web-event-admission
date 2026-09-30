@@ -1,0 +1,14 @@
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.spl
+*.synctex.gz
+*.pdf
+preview*.png
+__pycache__/
+.DS_Store
+.env
+*.key
+*.token
