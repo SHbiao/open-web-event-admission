@@ -15,7 +15,10 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
 D2 = HERE.parent
-STAGE2 = D2.parents[1] / "Stage2_实验验证"
+# Set OPEN_WEB_STAGE2 when running against the private archive. The public
+# release does not ship the restricted Stage2/D2 input packages.
+import os
+STAGE2 = Path(os.environ.get("OPEN_WEB_STAGE2", D2.parents[1] / "Stage2_Experiments"))
 WEB = STAGE2 / "experiments/open_web_prevalence"
 HIST = WEB / "system_diagnostic"
 D1 = WEB / "d1_clean_shallow_control/refit_v1"
