@@ -1,0 +1,44 @@
+{
+  "task_id": "SILVER-EXTENSION-20260930-v1",
+  "policy_version": "WEB-TEXT-ADMISSION-v2",
+  "content_set_sha256": "a92a290d5554f7629d2606f40816d4d5ef755da9f794da7a4fcae3f459ba2413",
+  "annotators": [
+    {
+      "model_identifier": "GPT-6",
+      "access_product": "Codex",
+      "role": "independent model annotator",
+      "started_utc": "2026-09-30T02:07:37Z",
+      "ended_utc": "2026-09-30T02:17:10Z",
+      "item_count": 300,
+      "package_config_sha256": "f90d4981093190ad41695170859cfc78c4818897cea9237b44aa34b1fa7417cc",
+      "package_items_sha256": "95d78875a44beb081d6baf96a59a2f04e2e1bfbd6d5f4fdea9c09855d5d22dd7"
+    },
+    {
+      "model_identifier": "claude-opus-5",
+      "display_name": "Claude Opus 5",
+      "access_product": "Claude Code",
+      "role": "independent model annotator",
+      "started_utc": "2026-09-30T02:07:50Z",
+      "ended_utc": "2026-09-30T02:23:21Z",
+      "item_count": 300,
+      "package_config_sha256": "68ea562052b3d432c9b75245df308d77445523108dedcd71eddaf01e9e1e06d1",
+      "package_items_sha256": "e18770c898dafd7feb9c5264465af6b5c9aceeff3a208d1ac398fd26d688322f"
+    }
+  ],
+  "overlap_audit": {
+    "historical_comparison_records": 2164,
+    "checks": [
+      "exact_source_id",
+      "exact_normalized_body",
+      "exact_external_url",
+      "near_duplicate_text"
+    ],
+    "explicitly_excluded_layers": [
+      "old40",
+      "DEV30",
+      "EVAL60"
+    ],
+    "overlap_audit_sha256": "f2bb9f69ef7fee73edf691668359135d41f7e9554234cf22a45a7d9338375450",
+    "result": "PASS"
+  }
+}
