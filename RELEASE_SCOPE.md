@@ -7,14 +7,18 @@ This file is a release gate, not a scientific result.
 - fixed evaluation runner source;
 - measurement contract and F3 audit report;
 - claim/evidence matrix and study overview;
-- item-free aggregate metrics.
+- item-free D2 aggregate metrics;
+- cleaned 300-item Silver dataset and item-level provenance;
+- English model-annotation and human-review protocols;
+- aggregate Silver quality-audit metrics.
 
 ## Excluded
 
-- raw Bluesky post text, URLs, handles, source IDs, and media;
+- D2 item text, direct source IDs, author records, acquisition payloads, and media files;
 - A/B packages, annotator answers, C adjudication records, and fused Gold;
+- model rationales, private annotation sessions, and human review notes;
 - private overlap and acquisition manifests;
 - restricted model weights, knowledge-base snapshots, runtime caches, and secrets;
 - generated PDFs, logs, temporary previews, and local environment files.
 
-Do not remove these exclusions merely to make the repository appear more complete. Any future data release requires a separate privacy, license, and venue-policy review.
+The released Silver JSONL is the cleaned text-and-metadata view used for annotation, not the raw acquisition response. Any additional data release requires a separate privacy, license, and venue-policy review.

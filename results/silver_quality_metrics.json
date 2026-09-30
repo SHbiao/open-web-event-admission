@@ -1,0 +1,89 @@
+{
+  "dual_model_raw": {
+    "items": 300,
+    "agreement": 272,
+    "agreement_rate": 0.9066666666666666,
+    "cohen_kappa": 0.8096101541251133,
+    "disagreements": 28,
+    "astra_labels": {
+      "ADMISSIBLE": 130,
+      "REJECT": 170
+    },
+    "claude_labels": {
+      "ADMISSIBLE": 128,
+      "REJECT": 172
+    }
+  },
+  "blinded_human_review": {
+    "items": 88,
+    "model_disagreements_adjudicated": 28,
+    "model_agreements_audited": 60,
+    "raw_consensus_confirmed": 52,
+    "raw_consensus_corrected": 8,
+    "balanced_audit_rate": 0.8666666666666667,
+    "balanced_audit_wilson_95": [
+      0.7583484032350039,
+      0.9308589051941303
+    ],
+    "stratified_population_agreement_point_estimate": 0.8421404446946242,
+    "by_consensus_label": {
+      "consensus_ADMISSIBLE": {
+        "human_agreement": 30,
+        "audited": 30,
+        "rate": 1.0,
+        "wilson_95": [
+          0.8864866068260312,
+          0.9999999999999999
+        ]
+      },
+      "consensus_REJECT": {
+        "human_agreement": 22,
+        "audited": 30,
+        "rate": 0.7333333333333333,
+        "wilson_95": [
+          0.555520383048111,
+          0.8581733668040368
+        ]
+      }
+    },
+    "by_collection_source": {
+      "legacy_unexposed_pool": {
+        "human_agreement": 30,
+        "audited": 32,
+        "rate": 0.9375,
+        "wilson_95": [
+          0.7985287685584542,
+          0.982689432968359
+        ]
+      },
+      "temporal_extension": {
+        "human_agreement": 22,
+        "audited": 28,
+        "rate": 0.7857142857142857,
+        "wilson_95": [
+          0.6046141434627812,
+          0.8978753966710211
+        ]
+      }
+    },
+    "disagreement_alignment": {
+      "astra": 14,
+      "claude_opus": 14
+    }
+  },
+  "raw_fusion_label_counts": {
+    "REJECT": 168,
+    "ADMISSIBLE": 132
+  },
+  "recommended_label_counts": {
+    "REJECT": 160,
+    "ADMISSIBLE": 140
+  },
+  "recommended_provenance_counts": {
+    "dual_model_consensus_unreviewed": 212,
+    "human_adjudicated_model_disagreement": 28,
+    "human_audit_confirmed_model_consensus": 52,
+    "human_audit_corrected_model_consensus": 8
+  },
+  "tier_interpretation": "The complete 300-item collection remains Silver because 212 items rely on unreviewed dual-model consensus."
+}

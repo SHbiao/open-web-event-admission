@@ -2,9 +2,9 @@
 
 ## Status
 
-- Date: 2026-09-29
+- Date: 2026-09-30
 - Route: Open-Web Event Admission / Calibration
-- Experimental status: F2 fixed evaluation completed; F3 audit passed; experiment channel closed
+- Experimental status: F2 fixed evaluation completed; F3 audit passed; 300-item Silver extension frozen
 - Manuscript type: diagnostic benchmark / protocol paper
 
 This document is the compact English record of the study. It reports completed evidence only and does not add experiments or alter frozen labels, thresholds, or outputs.
@@ -58,9 +58,17 @@ The A/B packages showed the same content in independently randomized order and e
 
 D2 is a controlled-calibration challenge set, not a probability sample, Web prevalence sample, or complete EXISTING/NEW/REJECT event-linking Gold.
 
+### Audited Silver extension
+
+The extension contains 300 unique items: 158 previously unexposed legacy items and 142 items from a later temporal collection. Two independently run model annotators agreed on 272/300 labels (90.67%; Cohen's kappa .8096). A human reviewer adjudicated all 28 disagreements and blindly audited 60 agreement cases.
+
+The agreement audit confirmed 52/60 labels. All 30 sampled consensus-ADMISSIBLE cases were confirmed; 22/30 sampled consensus-REJECT cases were confirmed, and the other eight were corrected to ADMISSIBLE. The frozen release therefore contains 140 ADMISSIBLE and 160 REJECT items. It remains Silver because 212 items rely on unreviewed dual-model consensus.
+
+Across P0, DEV30, EVAL60, D2, and Silver, the suite contains 572 item-level examples. This nearly 600-item total describes a layered benchmark suite, not a homogeneous Gold test set.
+
 ### Materials that are not pooled into the test set
 
-The capped 300-item retrieval pool is a retrieval pool, not 300 fully labeled independent test items. Historical mention-level labels (including the 1,762 legacy mention rows) are not equivalent to item-level admission Gold. P0, DEV/EVAL, and D2 serve different evidential roles and must not be reported as one homogeneous test population.
+The earlier capped 300-item retrieval pool was not itself a fully labeled independent test set. The audited Silver extension is a separately constructed and frozen resource, although 158 of its items come from the previously unexposed legacy pool. Historical mention-level labels (including the 1,762 legacy mention rows) are not equivalent to item-level admission Gold. P0, DEV/EVAL, D2, and Silver serve different evidential roles and must not be reported as one homogeneous test population.
 
 ## 4. Frozen experimental protocol
 
@@ -102,7 +110,8 @@ The defensible contribution is a diagnostic Open-Web Event Admission / Calibrati
 1. an item/target/mention task definition;
 2. a measurement contract separating extraction, retrieval, eligibility, and admission;
 3. coverage-aware metrics that retain failures in the denominator;
-4. evidence layers separating development, controlled diagnostics, and challenge confirmation;
-5. empirical diagnosis of candidate-admission mismatch, threshold transfer, and measurement-chain failure.
+4. a 572-item evidence suite separating development, controlled diagnostics, challenge confirmation, and audited Silver;
+5. a 300-item Silver extension whose audit exposes asymmetric reliability between consensus ADMISSIBLE and consensus REJECT labels;
+6. empirical diagnosis of candidate-admission mismatch, threshold transfer, and measurement-chain failure.
 
 The evaluation does not support a complete three-action event-linking benchmark, Web prevalence, deployment impact, or universal superiority of the Primary model. It supports the narrower conclusion that candidate retrieval is not equivalent to item admission, and that coverage and calibration must be measured as part of the downstream decision.

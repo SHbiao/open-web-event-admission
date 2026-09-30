@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Blinded human review row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "label",
+    "ambiguity",
+    "note"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "pattern": "^SIL-[0-9]{4}$"
+    },
+    "label": {
+      "enum": [
+        "ADMISSIBLE",
+        "REJECT"
+      ]
+    },
+    "ambiguity": {
+      "type": "boolean"
+    },
+    "note": {
+      "type": "string"
+    }
+  }
+}

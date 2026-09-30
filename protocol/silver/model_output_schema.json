@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Consensus-silver annotation row",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "item_id",
+    "label",
+    "guideline_clause",
+    "evidence_span",
+    "reason",
+    "ambiguity"
+  ],
+  "properties": {
+    "item_id": {
+      "type": "string",
+      "pattern": "^SIL-[0-9]{4}$"
+    },
+    "label": {
+      "enum": [
+        "ADMISSIBLE",
+        "REJECT"
+      ]
+    },
+    "guideline_clause": {
+      "enum": [
+        "A1",
+        "A2",
+        "R1",
+        "R2",
+        "R3"
+      ]
+    },
+    "evidence_span": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "reason": {
+      "type": "string",
+      "maxLength": 400
+    },
+    "ambiguity": {
+      "type": "boolean"
+    }
+  }
+}
