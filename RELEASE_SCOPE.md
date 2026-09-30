@@ -4,7 +4,6 @@ This file is a release gate, not a scientific result.
 
 ## Included
 
-- paper source and vector figure source;
 - fixed evaluation runner source;
 - measurement contract and F3 audit report;
 - claim/evidence matrix and study overview;
