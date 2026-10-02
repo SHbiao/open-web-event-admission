@@ -2,20 +2,20 @@
 
 This repository contains the released benchmark data, annotation protocols, evaluation code, and results for **When Candidate Retrieval Is Not Admission: A Coverage-Aware Evaluation Framework for Open-Web Event Organization**.
 
-The benchmark suite contains 572 item-level examples across distinct evidence layers: 80 P0 calibration items, 30 development items, 60 controlled-diagnostic items, 102 challenge-confirmation items, and a 300-item audited Silver extension. These layers have different evidential roles and must not be treated as one homogeneous test set or a 572-item Gold set.
+The release is a 1K-scale layered benchmark collection with 1,290 item records across calibration, controlled diagnostics, challenge confirmation, and two public extensions. The layers retain their documented construction and evaluation roles; the total is a collection size, not a claim that every record is an interchangeable test item.
 
 ## Repository layout
 
-- `src/`: fixed evaluation runner used for the D2 evaluation.
-- `protocol/`: measurement contracts, study records, and English D2 and Silver annotation protocols.
-- `results/`: fixed D2 scores and metrics, descriptive post-hoc diagnostics, and Silver quality-audit results.
-- `data/`: P0 metadata, the 102-item D2 challenge set with human Gold labels, the cleaned 300-item Silver release, and item-level Silver provenance.
+- `src/`: fixed evaluation runner and release-validation scripts.
+- `protocol/`: measurement contracts, study records, annotation guides, and post-hoc analysis specifications.
+- `results/`: fixed challenge scores, metrics, pipeline diagnostics, and annotation-quality analyses.
+- `data/`: cleaned evidence views, labels, provenance, and the extension manifest.
 
 ## Reproducibility status
 
-The reported system evaluation used the frozen 102-item D2 challenge set, fixed thresholds selected on development material, and a single scoring pass followed by verification. The Silver extension is a separate scale and annotation-quality layer; it is not used to tune or rescore D2.
+The reported system evaluation uses the fixed 102-item D2 challenge set, thresholds selected on development material, and a single scoring pass followed by verification. The public extensions are released as additional resource and annotation-quality layers; they do not alter or rescore the fixed D2 comparison.
 
-The public D2 release contains all 102 annotation-visible items and their frozen final Gold labels: 57 ADMISSIBLE and 45 REJECT. Labels come from 85 A/B agreements and 17 human adjudications. See [the dataset schema](data/README.md) and [the D2 annotation guide](protocol/d2_annotation_guide.md).
+The D2 release contains all 102 annotation-visible items and their final item labels: 57 `ADMISSIBLE` and 45 `REJECT`. Labels come from 85 A/B agreements and 17 human adjudications. See [the dataset schema](data/README.md) and [the D2 annotation guide](protocol/d2_annotation_guide.md).
 
 Validate the released IDs, label counts, provenance counts, and evidence hashes with Python 3 (standard library only):
 
@@ -23,7 +23,7 @@ Validate the released IDs, label counts, provenance counts, and evidence hashes 
 python src/export_d2_release.py
 ```
 
-`src/run_d2_fixed_evaluation.py` preserves the historical evaluation runner. Its original execution requires the archived Stage2 resources, serialized models, and runtime layout; releasing the cleaned D2 data does not bundle those dependencies.
+`src/run_d2_fixed_evaluation.py` preserves the historical evaluation runner. Its original execution requires the archived Stage2 resources, serialized models, and runtime layout; the cleaned release does not bundle those dependencies.
 
 ## Reproduce the reported diagnostics
 
@@ -33,27 +33,31 @@ The IPM revision adds descriptive analysis of existing outputs, with no inferenc
 python src/analyze_posthoc.py --check
 ```
 
-This checks all eight saved fixed operating points and AUC/AUPRC values, then reproduces the class-by-stage loss decomposition, 2,000 DEV-score bootstrap draws, and leave-one-out threshold diagnostics. Running without `--check` regenerates the three post-hoc result files. Resampling intervals describe sensitivity of the saved fitted scores; they are not population-performance confidence intervals or newly selected operating points.
+This checks all eight saved fixed operating points and AUC/AUPRC values, then reproduces the class-by-stage loss decomposition, 2,000 development-score bootstrap draws, and leave-one-out threshold diagnostics. Resampling intervals describe sensitivity of the saved fitted scores; they are not population-performance confidence intervals or newly selected operating points.
 
 | Manuscript component | Released input / configuration | Reproduction or output |
 | --- | --- | --- |
-| Item policy and D2 Gold | `data/d2_102.jsonl`, `protocol/d2_annotation_guide.md` | `src/export_d2_release.py` validates IDs, labels, and evidence hashes. |
+| Item policy and D2 labels | `data/d2_102.jsonl`, `protocol/d2_annotation_guide.md` | `src/export_d2_release.py` validates IDs, labels, and evidence hashes. |
 | Exact semantic prompts | `protocol/fixed_model_prompts.json` | Extractor, validity, salience, and admission templates from the archived protocol. |
 | Fixed thresholds and resource identity | `protocol/posthoc_input_manifest.json` | Original prediction, calibration, prompt, model, and catalog hashes; saved DEV and D2 split IDs. |
 | Eight-system evaluation | `results/d2_fixed_predictions.jsonl` | `results/d2_fixed_metrics.json`, `results/d2_aggregate_metrics.csv`; checked by `src/analyze_posthoc.py`. |
-| Pipeline loss decomposition | Fixed D2 method outputs plus released Gold | `results/pipeline_loss.csv`. |
+| Pipeline loss decomposition | Fixed D2 method outputs plus released labels | `results/pipeline_loss.csv`. |
 | Threshold stability | `data/dev30_fixed_scores.jsonl`, `protocol/posthoc_analysis.md` | `results/threshold_stability.csv`, `results/posthoc_analysis.json`. |
-| Audited Silver | `data/silver_300.jsonl`, `data/silver_300_provenance.jsonl`, `protocol/silver/` | `results/silver_quality_metrics.json`, `results/silver_audit_report.md`. |
+| Public extensions | `data/consensus_extension_518.jsonl`, `data/human_extension_200.jsonl` | Per-item provenance and the extension manifest in `data/`. |
 
 The score release is an exact projection of saved outputs, not a rerun. `src/prepare_posthoc_release.py` documents the export and checks source identities; users reproducing the diagnostics need only the files already in this repository. DEV identifiers in the score view are release-local identifiers preserving archived row order; private DEV text and acquisition identifiers are not required by the analysis.
 
-The versioned snapshot is `ipm-evaluation-v1`. The tag is anchored to a Git commit; no archive DOI is claimed. The manuscript's original D2 results and the new post-hoc analyses retain separate evidence status.
+The versioned snapshot is `ipm-evaluation-v1`. The tag is anchored to a Git commit; no archive DOI is claimed. The manuscript's fixed D2 results and post-hoc analyses retain their documented evidence roles.
 
-For the Silver tier, two independent models agreed on 272/300 items (90.67%, Cohen's kappa 0.8096). All 28 disagreements were human-adjudicated. A blinded human audit of 60 agreement cases confirmed 52/60: 30/30 consensus-ADMISSIBLE cases and 22/30 consensus-REJECT cases. The eight corrections all changed REJECT to ADMISSIBLE. The frozen release contains 140 ADMISSIBLE and 160 REJECT items.
+## Extension construction
+
+- `data/consensus_extension_518.jsonl` contains 518 items selected from an 800-item frozen candidate pool when the two independent model passes produced the same label. The 282 disagreements remain in the private audit ledger and are not silently relabelled.
+- `data/human_extension_200.jsonl` contains 200 newly collected items with independent A/B annotation and adjudication of 46 disagreements. The fused labels are 152 `ADMISSIBLE` and 48 `REJECT`.
+- The earlier 300-item audited extension remains available under its historical filenames (`data/silver_300.jsonl` and its provenance file) for reproducibility; the public narrative treats it as an extension layer.
 
 ## Data and ethics
 
-`data/d2_102.jsonl` and `data/silver_300.jsonl` contain the cleaned views shown during annotation: body text, UTC time, reply/quote/media flags, the released labels, and compact provenance fields. D2 retains human Gold labels; the extension remains audited Silver. Direct source identifiers, author records, acquisition responses, model rationales, and private annotation sessions are not included. Text and metadata are preserved as displayed to annotators.
+The released JSONL views contain body text, UTC time, reply/quote/media flags, labels, and compact provenance fields matching the information shown during annotation. Direct source identifiers, author records, acquisition responses, model rationales, and private annotation sessions are not included. Text and metadata are preserved as displayed to annotators.
 
 ## License
 

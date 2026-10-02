@@ -25,9 +25,9 @@ Do not verify whether the author's claim is true or whether an event is already 
 
 Each annotator labels all 102 items and records prior exposure. There is no default label. Notes are optional, and a separate rejection subtype is not required. Display problems are reported instead of forcing a semantic label. First complete submissions are preserved before adjudication.
 
-The A/B packages contain identical evidence in independently randomized orders. The first submissions agreed on 85/102 items (83.33%, Cohen's kappa 0.6612). Human C adjudication resolved all 17 disagreements. The final Gold contains 57 ADMISSIBLE and 45 REJECT items. C adjudication included reported Youdao translation assistance and was not a third independent blind annotation pass.
+The A/B packages contain identical evidence in independently randomized orders. The first submissions agreed on 85/102 items (83.33%, Cohen's kappa 0.6612). Human C adjudication resolved all 17 disagreements. The final item labels contain 57 ADMISSIBLE and 45 REJECT items. C adjudication included reported Youdao translation assistance and was not a third independent blind annotation pass.
 
-The released `gold_source` distinguishes `AB_AGREEMENT` (85 items) from `C_ADJUDICATION` (17 items). Final labels and displayed evidence are in `data/d2_102.jsonl`.
+The released `gold_source` field distinguishes `AB_AGREEMENT` (85 items) from `C_ADJUDICATION` (17 items) for compatibility with the fixed evaluation files. Final labels and displayed evidence are in `data/d2_102.jsonl`.
 
 ## Collection and evaluation role
 

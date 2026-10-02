@@ -1,6 +1,6 @@
 # Public release scope and exclusions
 
-This file is a release gate, not a scientific result.
+This file records what is shipped with the 1K-scale collection.
 
 ## Included
 
@@ -9,20 +9,21 @@ This file is a release gate, not a scientific result.
 - claim/evidence matrix and study overview;
 - item-free D2 aggregate metrics;
 - exact saved D2 per-method scores, statuses, operating points, and decisions, with private feature records omitted;
-- DEV30 labels and saved scores for the three pre-specified post-hoc diagnostic methods;
+- DEV30 labels and saved scores for the declared post-hoc diagnostic methods;
 - semantic prompt templates, resource identities, split identifiers, and reproducible post-hoc analysis code;
-- all 102 cleaned D2 annotation-visible items, final human Gold labels, and agreement/adjudication provenance;
-- cleaned 300-item Silver dataset and item-level provenance;
-- English D2 human-annotation, Silver model-annotation, and Silver human-review protocols;
-- aggregate Silver quality-audit metrics.
+- all 102 cleaned D2 annotation-visible items, final item labels, and agreement/adjudication provenance;
+- the earlier 300-item audited extension and item-level provenance;
+- the 518-item consensus extension and its agreement/evidence-hash provenance;
+- the 200-item human extension and its A/B/adjudication provenance;
+- English annotation and review protocols plus aggregate annotation-quality analyses.
 
 ## Excluded
 
 - direct source IDs, author records, acquisition payloads, and media files;
-- private A/B session records, individual annotator answers, and C adjudication notes;
+- private A/B session records, individual annotator answers, and adjudication notes;
 - model rationales, private annotation sessions, and human review notes;
 - private overlap and acquisition manifests;
 - restricted model weights, knowledge-base snapshots, runtime caches, and secrets;
 - generated PDFs, logs, temporary previews, and local environment files.
 
-The D2 and Silver JSONL files preserve the cleaned text-and-metadata views used for annotation. D2 final Gold labels are public in `data/d2_102.jsonl`; the richer internal fusion file and its private annotation records remain archived. The releases retain their separate challenge-confirmation and audited Silver evidence roles.
+The JSONL files preserve the cleaned text-and-metadata views used during annotation. Historical filenames are retained where evaluation scripts depend on them; the public data manifest describes the collection using construction layers and provenance rather than tier labels.

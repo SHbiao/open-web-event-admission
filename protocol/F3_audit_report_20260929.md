@@ -3,7 +3,7 @@
 - Task: `F3-AUDIT-20260929-v1`
 - Status: `F3_AUDIT_PASS`
 - Scope: read-only recomputation of the existing F2 blind predictions, scoring audit, fixed metrics, curves, bootstrap intervals, and recorded hashes.
-- Evidence level: D2 is a controlled-calibration challenge/confirmation set; it is not a probability sample, independent third-party Gold, or complete three-action linking test.
+- Evidence level: D2 is a controlled-calibration challenge/confirmation set; it is not a probability sample, independent third-party label source, or complete three-action linking test.
 
 ## Completeness and denominators
 
@@ -13,7 +13,7 @@ Primary candidate coverage is 79/102. There are 23 NO_CANDIDATE items and 9 pars
 
 ## Independent recomputation
 
-The audit recomputed coverage, decision counts, ROC-AUC, AUPRC, all Retention--FAR curves, and the frozen paired bootstrap from the existing F2 artifacts. The maximum absolute metric error was zero. The bootstrap used the frozen Gold stratification, content clusters, seed `20260928`, 2,000 draws, and the preregistered statistic order; all eight methods matched the F2 intervals.
+The audit recomputed coverage, decision counts, ROC-AUC, AUPRC, all Retention--FAR curves, and the frozen paired bootstrap from the existing F2 artifacts. The maximum absolute metric error was zero. The bootstrap used the frozen reference-class stratification, content clusters, seed `20260928`, 2,000 draws, and the preregistered statistic order; all eight methods matched the F2 intervals.
 
 | Frozen method | Score coverage | Retained / 57 | False admitted / 45 | Full ROC-AUC | Full AUPRC |
 |---|---:|---:|---:|---:|---:|
@@ -32,7 +32,7 @@ The paired bootstrap intervals are: Primary Retention [.5789, .8246] and FAR [.1
 
 ## Protocol deviation
 
-F2 blind prediction was completed before scoring and Gold access. After scoring, a read-only Gold SHA-256 recomputation was performed during hash registration, exceeding the strict score-only access boundary. The record shows no label parsing, prediction/configuration change, or scoring rerun. This deviation is disclosed and does not change the F2 values.
+F2 blind prediction was completed before scoring and label access. After scoring, a read-only label SHA-256 recomputation was performed during hash registration, exceeding the strict score-only access boundary. The record shows no label parsing, prediction/configuration change, or scoring rerun. This deviation is disclosed and does not change the F2 values.
 
 ## Scientific boundary
 

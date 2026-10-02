@@ -85,5 +85,5 @@
     "human_audit_confirmed_model_consensus": 52,
     "human_audit_corrected_model_consensus": 8
   },
-  "tier_interpretation": "The complete 300-item collection remains Silver because 212 items rely on unreviewed dual-model consensus."
+  "tier_interpretation": "The 300-item extension preserves item-level provenance because 212 items rely on unreviewed dual-model consensus."
 }

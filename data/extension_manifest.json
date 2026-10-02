@@ -1,0 +1,13 @@
+{
+  "consensus_extension": {
+    "items": 518,
+    "source_candidates": 800,
+    "excluded_disagreements": 282
+  },
+  "human_extension": {
+    "items": 200,
+    "source": "fresh_200",
+    "adjudicated_disagreements": 46
+  },
+  "total_extension_items": 718
+}

@@ -10,7 +10,7 @@ Defined on 2026-09-30, after the fixed D2 evaluation. These descriptive analyses
 
 ## Pipeline loss decomposition
 
-For Primary joint linear, cross-tabulate the saved score status by Gold class. Partition each class into unavailable score, scored but not admitted, and scored and admitted. Resolve unavailable scores into NO_CANDIDATE, INVALID_SPANS, and INVALID_JSON using the saved method status. Partial extraction warnings that still yield a legal score are not counted as unavailable.
+For Primary joint linear, cross-tabulate the saved score status by reference class. Partition each class into unavailable score, scored but not admitted, and scored and admitted. Resolve unavailable scores into NO_CANDIDATE, INVALID_SPANS, and INVALID_JSON using the saved method status. Partial extraction warnings that still yield a legal score are not counted as unavailable.
 
 ## Threshold stability
 
