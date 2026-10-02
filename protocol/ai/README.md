@@ -1,6 +1,6 @@
-# Earlier extension annotation protocol
+# AI-assisted extension annotation protocol
 
-This directory is retained at its historical path so that the earlier 300-item release remains reproducible. The public collection describes that material as the audited extension.
+This directory contains the protocols for the AI-assisted extension records. The earlier 300-item run remains reproducible through the run metadata and item-level provenance.
 
 - `model_annotation_guide.md`: admission policy shown to both model annotators.
 - `model_annotation_prompt.md`: task instructions used for each independent pass.

@@ -55,7 +55,7 @@ def main():
         positives = sorted(r['scores'][name] for r in scores if r['gold_label'] == 'ADMISSIBLE')
         assert abs(positives[1] - thresholds[name]) < 1e-12
     write(ROOT / "results/d2_fixed_predictions.jsonl", predictions, lines=True)
-    write(ROOT / "data/dev30_fixed_scores.jsonl", scores, lines=True)
+    write(ROOT / "data/human/dev30_fixed_scores.jsonl", scores, lines=True)
     write(ROOT / "results/d2_fixed_metrics.json", read(args.runtime / "fixed_metrics.json"))
     protocol_path = args.development / "protocol.json"
     protocol = read(protocol_path)

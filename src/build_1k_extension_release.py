@@ -61,7 +61,7 @@ def main() -> None:
             "evidence": item["evidence"],
             "evidence_sha256": item["evidence_sha256"],
             "label": label,
-            "collection_layer": "consensus_extension",
+            "collection_group": "ai_assisted",
         })
         consensus_provenance.append({
             "item_id": item_id,
@@ -70,7 +70,7 @@ def main() -> None:
             "astra_label": label,
             "model_agreement": True,
             "selection_rule": "dual_model_consensus_only",
-            "collection_layer": "consensus_extension",
+            "collection_group": "ai_assisted",
         })
 
     human_by_id = {row["item_id"]: row for row in human_items}
@@ -88,7 +88,7 @@ def main() -> None:
             "evidence": item["evidence"],
             "evidence_sha256": item["evidence_sha256"],
             "label": fused["label"],
-            "collection_layer": "human_extension",
+            "collection_group": "human",
         })
         human_provenance.append({
             "item_id": item_id,
@@ -99,19 +99,38 @@ def main() -> None:
             "b_label": fused["b_label"],
             "adjudication_label": fused["adjudication_label"],
             "annotation_source": "independent_human_annotation_with_adjudication",
-            "collection_layer": "human_extension",
+            "collection_group": "human",
         })
 
-    DATA.mkdir(exist_ok=True)
-    write_jsonl(DATA / "consensus_extension_518.jsonl", consensus_rows)
-    write_jsonl(DATA / "consensus_extension_518_provenance.jsonl", consensus_provenance)
-    write_jsonl(DATA / "human_extension_200.jsonl", human_rows)
-    write_jsonl(DATA / "human_extension_200_provenance.jsonl", human_provenance)
+    (DATA / "ai").mkdir(parents=True, exist_ok=True)
+    (DATA / "human").mkdir(parents=True, exist_ok=True)
+    write_jsonl(DATA / "ai/consensus_extension_518.jsonl", consensus_rows)
+    write_jsonl(DATA / "ai/consensus_extension_518_provenance.jsonl", consensus_provenance)
+    write_jsonl(DATA / "human/human_extension_200.jsonl", human_rows)
+    write_jsonl(DATA / "human/human_extension_200_provenance.jsonl", human_provenance)
 
     summary = {
-        "consensus_extension": {"items": len(consensus_rows), "source_candidates": 800, "excluded_disagreements": 282},
-        "human_extension": {"items": len(human_rows), "source": "fresh_200", "adjudicated_disagreements": 46},
-        "total_extension_items": len(consensus_rows) + len(human_rows),
+        "collection_total_items": 1290,
+        "human_group": {
+            "total_items": 472,
+            "primary_evidence_items": 302,
+            "calibration_and_controlled_diagnostic_items": 170,
+            "d2_items": 102,
+            "human_extension_items": len(human_rows),
+        },
+        "ai_assisted_group": {
+            "total_items": 818,
+            "ai_extension_300_items": 300,
+            "consensus_extension_518_items": len(consensus_rows),
+        },
+        "extension_selection": {
+            "consensus_source_candidates": 800,
+            "consensus_excluded_disagreements": 282,
+            "human_source": "fresh_200",
+            "human_adjudicated_disagreements": 46,
+        },
+        "new_extension_items": len(consensus_rows) + len(human_rows),
+        "all_extension_items": 300 + len(consensus_rows) + len(human_rows),
     }
     (DATA / "extension_manifest.json").write_text(json.dumps(summary, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(summary, sort_keys=True))

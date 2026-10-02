@@ -68,12 +68,12 @@ def ranking_metrics(pairs):
 
 def run():
     predictions = jsonl(ROOT / 'results/d2_fixed_predictions.jsonl')
-    gold_rows = jsonl(ROOT / 'data/d2_102.jsonl')
+    gold_rows = jsonl(ROOT / 'data/human/d2_102.jsonl')
     gold = {r['item_id']: r['gold_label'] for r in gold_rows}
     assert len(predictions) == len(gold) == 102
     assert {r['item_id'] for r in predictions} == set(gold)
     assert Counter(gold.values()) == {'ADMISSIBLE': 57, 'REJECT': 45}
-    dev = jsonl(ROOT / 'data/dev30_fixed_scores.jsonl')
+    dev = jsonl(ROOT / 'data/human/dev30_fixed_scores.jsonl')
     assert len(dev) == 30 and len({r['item_id'] for r in dev}) == 30
     positive = [r for r in dev if r['gold_label'] == 'ADMISSIBLE']
     negative = [r for r in dev if r['gold_label'] == 'REJECT']

@@ -27,10 +27,10 @@ Each annotator labels all 102 items and records prior exposure. There is no defa
 
 The A/B packages contain identical evidence in independently randomized orders. The first submissions agreed on 85/102 items (83.33%, Cohen's kappa 0.6612). Human C adjudication resolved all 17 disagreements. The final item labels contain 57 ADMISSIBLE and 45 REJECT items. C adjudication included reported Youdao translation assistance and was not a third independent blind annotation pass.
 
-The released `gold_source` field distinguishes `AB_AGREEMENT` (85 items) from `C_ADJUDICATION` (17 items) for compatibility with the fixed evaluation files. Final labels and displayed evidence are in `data/d2_102.jsonl`.
+The released `gold_source` field distinguishes `AB_AGREEMENT` (85 items) from `C_ADJUDICATION` (17 items) for compatibility with the fixed evaluation files. Final labels and displayed evidence are in `data/human/d2_102.jsonl`.
 
 ## Collection and evaluation role
 
 D2 was collected through Bluesky Public AppView `searchPosts` with 12 fixed English topic queries in the UTC window from 2026-09-22 inclusive to 2026-09-28 exclusive. The 108 selected records yielded 102 items after six internal duplicate exclusions. Historical overlap checks covered source IDs, normalized bodies, external URLs, near duplicates, and content clusters against 1,029 records.
 
-D2 is the frozen challenge-confirmation layer for the eight-system comparison. It is a query-selected challenge set rather than a probability sample. The measurement and failure rules are specified in `protocol/F1_measurement_contract.md`; aggregate results are in `results/d2_aggregate_metrics.csv`.
+D2 is the human-group challenge-confirmation set for the eight-system comparison. It is a query-selected challenge set rather than a probability sample. The measurement and failure rules are specified in `protocol/F1_measurement_contract.md`; aggregate results are in `results/d2_aggregate_metrics.csv`.

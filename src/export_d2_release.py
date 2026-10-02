@@ -75,7 +75,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--source", type=Path, help="Frozen D2 archive root; omit to validate the public file")
     parser.add_argument("--output", type=Path,
-                        default=Path(__file__).resolve().parents[1] / "data/d2_102.jsonl")
+                        default=Path(__file__).resolve().parents[1] / "data/human/d2_102.jsonl")
     args = parser.parse_args()
     if args.source:
         export(args.source, args.output)

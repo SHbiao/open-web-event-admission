@@ -1,13 +1,23 @@
 {
-  "consensus_extension": {
-    "items": 518,
-    "source_candidates": 800,
-    "excluded_disagreements": 282
+  "collection_total_items": 1290,
+  "human_group": {
+    "total_items": 472,
+    "primary_evidence_items": 302,
+    "calibration_and_controlled_diagnostic_items": 170,
+    "d2_items": 102,
+    "human_extension_items": 200
   },
-  "human_extension": {
-    "items": 200,
-    "source": "fresh_200",
-    "adjudicated_disagreements": 46
+  "ai_assisted_group": {
+    "total_items": 818,
+    "ai_extension_300_items": 300,
+    "consensus_extension_518_items": 518
   },
-  "total_extension_items": 718
+  "extension_selection": {
+    "consensus_source_candidates": 800,
+    "consensus_excluded_disagreements": 282,
+    "human_source": "fresh_200",
+    "human_adjudicated_disagreements": 46
+  },
+  "new_extension_items": 718,
+  "all_extension_items": 1018
 }

@@ -1,4 +1,4 @@
-# Final 300-Item Extension Audit
+# Final 300-Item AI-Assisted Extension Audit
 
 - Status: `FINAL_EXTENSION_AUDIT_FROZEN`.
 - Items: 300 unique items; 140 ADMISSIBLE and 160 REJECT in the recommended release.
@@ -9,5 +9,5 @@
 - The eight audited corrections all change model-consensus REJECT to human ADMISSIBLE.
 - Disagreement adjudication aligned with Astra on 14 items and Claude Opus on 14 items.
 - Recommended release provenance: 212 unreviewed dual-model consensus, 52 human-confirmed consensus, 8 human-corrected consensus, and 28 human-adjudicated disagreements.
-- `raw_consensus_fusion.jsonl` preserves the pre-audit fusion rule for quality analysis; the historical `silver_dataset.jsonl` path is the recommended release and uses the human judgment for every reviewed item.
+- The public AI-group files preserve the pre-audit consensus view and the item-level provenance used for quality analysis.
 - The audit is stratified and diagnostic; it is not a Web-population accuracy estimate. The release preserves the provenance of model consensus and human review for each item.

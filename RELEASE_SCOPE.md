@@ -1,6 +1,6 @@
 # Public release scope and exclusions
 
-This file records what is shipped with the 1K-scale collection.
+This file records what is shipped with the 1,290-item collection.
 
 ## Included
 
@@ -12,9 +12,8 @@ This file records what is shipped with the 1K-scale collection.
 - DEV30 labels and saved scores for the declared post-hoc diagnostic methods;
 - semantic prompt templates, resource identities, split identifiers, and reproducible post-hoc analysis code;
 - all 102 cleaned D2 annotation-visible items, final item labels, and agreement/adjudication provenance;
-- the earlier 300-item audited extension and item-level provenance;
-- the 518-item consensus extension and its agreement/evidence-hash provenance;
-- the 200-item human extension and its A/B/adjudication provenance;
+- the human group: calibration/diagnostic records and the 200-item human extension with its provenance;
+- the AI-assisted group: the 300-item audited extension and the 518-item agreement-selected extension with provenance;
 - English annotation and review protocols plus aggregate annotation-quality analyses.
 
 ## Excluded
@@ -26,4 +25,4 @@ This file records what is shipped with the 1K-scale collection.
 - restricted model weights, knowledge-base snapshots, runtime caches, and secrets;
 - generated PDFs, logs, temporary previews, and local environment files.
 
-The JSONL files preserve the cleaned text-and-metadata views used during annotation. Historical filenames are retained where evaluation scripts depend on them; the public data manifest describes the collection using construction layers and provenance rather than tier labels.
+The JSONL files preserve the cleaned text-and-metadata views used during annotation. The public narrative uses two annotation groups, while compatibility fields required by the historical D2 runner remain unchanged inside the D2 data and scripts.
