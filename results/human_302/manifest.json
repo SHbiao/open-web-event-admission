@@ -1,0 +1,41 @@
+{
+  "items": 302,
+  "admissible": 209,
+  "reject": 93,
+  "inference_uses_labels": false,
+  "refit_or_threshold_selection_on_test": false,
+  "cohorts": {
+    "original_challenge": 102,
+    "human_extension": 200
+  },
+  "sources": [
+    {
+      "name": "predictions.jsonl",
+      "sha256": "3b606fb2ec3f37097209346969aca5b79cc946c5956984aa69a1cede071846e2"
+    },
+    {
+      "name": "predictions.jsonl",
+      "sha256": "aa7753ac3d14908d5f29bd1ca2595af3b9d866e4850962d1358ee9216f29e5aa"
+    },
+    {
+      "name": "predictions_manifest.json",
+      "sha256": "e2931e570a0a3017946a94228c22111ea279647a572936dfde9ec7d5b8ce7cf4"
+    },
+    {
+      "name": "run_human_200_fixed.py",
+      "sha256": "04d7664cd271dcef78a68e978cfde3666fbe0febdd628f83f04ef54419e67451"
+    },
+    {
+      "name": "d2_102.jsonl",
+      "sha256": "ab73d9283d2b52b69da47c9fe9785c7e2df1984f2633d465e4d510d6407df6bd"
+    },
+    {
+      "name": "human_extension_200.jsonl",
+      "sha256": "da643a068274afc69801fbd1a9f52501e21cb8f468a7ad13898c43da4f61732a"
+    }
+  ],
+  "exports": {
+    "fixed_metrics.json": "a1c0e001f3b75175de8b9fc3a0824c57b9844600de436063bf21845880b8bf70",
+    "predictions.jsonl": "0acfa51bbda0d2db91365606c0c8a0624e1f89aa1459bc01d21df81476d5f5c7"
+  }
+}

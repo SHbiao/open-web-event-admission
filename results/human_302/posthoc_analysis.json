@@ -1,0 +1,270 @@
+{
+  "analysis": "post-hoc descriptive; no refitting or operating-point selection",
+  "seed": 20260930,
+  "bootstrap_draws": 2000,
+  "positive_denominator": 209,
+  "negative_denominator": 93,
+  "main_results": [
+    {
+      "method": "admit_all",
+      "coverage_count": 302,
+      "retained": 209,
+      "false_admitted": 93,
+      "auc": 0.5,
+      "auprc": 0.6920529801324503,
+      "ranking_population": "full"
+    },
+    {
+      "method": "bm25_full_top1",
+      "coverage_count": 301,
+      "retained": 188,
+      "false_admitted": 60,
+      "auc": 0.7379862700228833,
+      "auprc": 0.8540235600076501,
+      "ranking_population": "conditional"
+    },
+    {
+      "method": "bge_full_top1",
+      "coverage_count": 301,
+      "retained": 192,
+      "false_admitted": 80,
+      "auc": 0.6369877262325775,
+      "auprc": 0.8027034129652221,
+      "ranking_population": "conditional"
+    },
+    {
+      "method": "validity",
+      "coverage_count": 255,
+      "retained": 168,
+      "false_admitted": 24,
+      "auc": 0.8954054054054054,
+      "auprc": 0.9525042980899854,
+      "ranking_population": "conditional"
+    },
+    {
+      "method": "direct_admission",
+      "coverage_count": 302,
+      "retained": 175,
+      "false_admitted": 23,
+      "auc": 0.8751093275711272,
+      "auprc": 0.9437905240016232,
+      "ranking_population": "full"
+    },
+    {
+      "method": "clean_linear",
+      "coverage_count": 302,
+      "retained": 136,
+      "false_admitted": 44,
+      "auc": 0.5824715748315069,
+      "auprc": 0.7201021138287657,
+      "ranking_population": "full"
+    },
+    {
+      "method": "clean_rbf",
+      "coverage_count": 302,
+      "retained": 124,
+      "false_admitted": 27,
+      "auc": 0.7124813500025724,
+      "auprc": 0.8244441802947009,
+      "ranking_population": "full"
+    },
+    {
+      "method": "original_exact_existing_joint_linear",
+      "coverage_count": 255,
+      "retained": 153,
+      "false_admitted": 17,
+      "auc": 0.8444015444015444,
+      "auprc": 0.919480327000769,
+      "ranking_population": "conditional"
+    }
+  ],
+  "primary_pipeline_counts": {
+    "NO_CANDIDATE": {
+      "ADMISSIBLE": 1,
+      "REJECT": 17
+    },
+    "INVALID_SPANS": {
+      "ADMISSIBLE": 10,
+      "REJECT": 2
+    },
+    "INVALID_JSON": {
+      "ADMISSIBLE": 13,
+      "REJECT": 4
+    },
+    "SCORED_NOT_ADMITTED": {
+      "ADMISSIBLE": 32,
+      "REJECT": 53
+    },
+    "SCORED_ADMITTED": {
+      "ADMISSIBLE": 153,
+      "REJECT": 17
+    }
+  },
+  "threshold_stability": {
+    "original_exact_existing_joint_linear": {
+      "fixed_threshold": -0.15015674438193655,
+      "fixed_operating_counts": [
+        153,
+        17
+      ],
+      "bootstrap": {
+        "threshold": {
+          "min": -0.1698048251312062,
+          "p025": -0.1698048251312062,
+          "median": -0.15015674438193655,
+          "p975": 0.31611763756888356,
+          "max": 0.6451554318876485
+        },
+        "retained": {
+          "min": 91,
+          "p025": 119.0,
+          "median": 153.0,
+          "p975": 154.0,
+          "max": 154
+        },
+        "false_admitted": {
+          "min": 5,
+          "p025": 13.0,
+          "median": 17.0,
+          "p975": 17.0,
+          "max": 17
+        },
+        "distinct_thresholds": 8
+      },
+      "leave_one_out": {
+        "threshold": {
+          "min": -0.15015674438193655,
+          "p025": -0.15015674438193655,
+          "median": -0.15015674438193655,
+          "p975": -0.12038547384982135,
+          "max": -0.12038547384982135
+        },
+        "retained": {
+          "min": 150,
+          "p025": 150.0,
+          "median": 153.0,
+          "p975": 153.0,
+          "max": 153
+        },
+        "false_admitted": {
+          "min": 17,
+          "p025": 17.0,
+          "median": 17.0,
+          "p975": 17.0,
+          "max": 17
+        },
+        "distinct_thresholds": 2
+      }
+    },
+    "direct_admission": {
+      "fixed_threshold": 0.5,
+      "fixed_operating_counts": [
+        175,
+        23
+      ],
+      "bootstrap": {
+        "threshold": {
+          "min": -3.75,
+          "p025": -3.75,
+          "median": 0.5,
+          "p975": 4.5,
+          "max": 10.375
+        },
+        "retained": {
+          "min": 99,
+          "p025": 155.0,
+          "median": 175.0,
+          "p975": 190.0,
+          "max": 190
+        },
+        "false_admitted": {
+          "min": 3,
+          "p025": 11.0,
+          "median": 23.0,
+          "p975": 43.0,
+          "max": 43
+        },
+        "distinct_thresholds": 8
+      },
+      "leave_one_out": {
+        "threshold": {
+          "min": 0.5,
+          "p025": 0.5,
+          "median": 0.5,
+          "p975": 0.75,
+          "max": 0.75
+        },
+        "retained": {
+          "min": 174,
+          "p025": 174.0,
+          "median": 175.0,
+          "p975": 175.0,
+          "max": 175
+        },
+        "false_admitted": {
+          "min": 22,
+          "p025": 22.0,
+          "median": 23.0,
+          "p975": 23.0,
+          "max": 23
+        },
+        "distinct_thresholds": 2
+      }
+    },
+    "validity": {
+      "fixed_threshold": 3.25,
+      "fixed_operating_counts": [
+        168,
+        24
+      ],
+      "bootstrap": {
+        "threshold": {
+          "min": -2.25,
+          "p025": -2.25,
+          "median": 3.25,
+          "p975": 9.25,
+          "max": 11.875
+        },
+        "retained": {
+          "min": 113,
+          "p025": 137.0,
+          "median": 168.0,
+          "p975": 177.0,
+          "max": 177
+        },
+        "false_admitted": {
+          "min": 1,
+          "p025": 8.0,
+          "median": 24.0,
+          "p975": 42.0,
+          "max": 42
+        },
+        "distinct_thresholds": 7
+      },
+      "leave_one_out": {
+        "threshold": {
+          "min": 3.25,
+          "p025": 3.25,
+          "median": 3.25,
+          "p975": 5.0,
+          "max": 5.0
+        },
+        "retained": {
+          "min": 163,
+          "p025": 163.0,
+          "median": 168.0,
+          "p975": 168.0,
+          "max": 168
+        },
+        "false_admitted": {
+          "min": 20,
+          "p025": 20.0,
+          "median": 24.0,
+          "p975": 24.0,
+          "max": 24
+        },
+        "distinct_thresholds": 2
+      }
+    }
+  }
+}
